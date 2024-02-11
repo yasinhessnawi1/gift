@@ -5,16 +5,11 @@
     min-height: 100vh;
     background-color: rgb(238, 144, 255);
 }
-.book{
+.book {
     position: relative;
     border-radius: 10px;
     width: 210px;
     height: 300px;
-    /* Internal Image, upload your couple image here */
-    background-image: url(IMG_5991.JPG);
-    background-size: cover;
-    background-position: center;
-    background-size: 97%;
     -webkit-box-shadow: 1px 1px 12px black;
     box-shadow: 1px 1px 12px black;
     -webkit-transform: preserve-3d;
@@ -23,6 +18,39 @@
     -webkit-perspective: 2000px;
     perspective: 2000px;
 }
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(IMG_5991.JPG);
+    background-size: cover;
+    background-position: center;
+    background-size: 97%;
+    border-radius: 10px;
+}
+
+.book .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    background-image: linear-gradient(40deg, rgb(218, 1, 203), black);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.book.clicked .cover {
+    transform: rotateY(-95deg);
+}
+
 .cover{
     top: 0;
     position: absolute;
@@ -49,13 +77,8 @@
     -ms-transform: rotateY(-85deg);
     transform: rotatey(-95deg);
 }
-.book .cover {
-    transform: rotateY(0deg); /* Initial state: cover closed */
-}
 
-.book.clicked .cover {
-    transform: rotateY(-95deg); /* Cover open when the 'clicked' class is present */
-}
+
 
 .heart {
     position: relative;
