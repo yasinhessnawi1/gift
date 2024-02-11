@@ -49,6 +49,10 @@
     -ms-transform: rotateY(-85deg);
     transform: rotatey(-95deg);
 }
+.book.clicked .cover {
+    transform: rotateY(-95deg);
+}
+
 .heart {
     position: relative;
     background-color: #e60303;
