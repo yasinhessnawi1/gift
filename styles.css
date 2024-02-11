@@ -49,8 +49,12 @@
     -ms-transform: rotateY(-85deg);
     transform: rotatey(-95deg);
 }
+.book .cover {
+    transform: rotateY(0deg); /* Initial state: cover closed */
+}
+
 .book.clicked .cover {
-    transform: rotateY(-95deg);
+    transform: rotateY(-95deg); /* Cover open when the 'clicked' class is present */
 }
 
 .heart {
